@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
             int newX = (int) (x + length * Math.cos(angle));
             int newY = (int) (y + length * Math.sin(angle));
 
-
-
             /*
              * PAINT:
              * stroke width
              * stroke cap
              * color
              */
+
+            //TODO: draw line here
 
             /*
              * RECURSE:
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
             //call recursion
             drawBranch(newX, newY, newAngle, newLength);
-
 
         }
 
