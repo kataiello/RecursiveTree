@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RecursiveTree</string>
+    <string name="depth_prompt">Depth:</string>
+    <string name="reset_btn">redraw</string>
+    <string name="default_depth">3</string>
 </resources>

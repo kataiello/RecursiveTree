@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         >
 
-        <com.jterm.katie.mandelbrot_solution.MandelbrotView
+        <com.example.demouser.recursivetree.TreeView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/mandelbrot_view"
+            android:id="@+id/tree_view"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             />
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_below="@id/mandelbrot_view"
+            android:layout_below="@id/tree_view"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             >
