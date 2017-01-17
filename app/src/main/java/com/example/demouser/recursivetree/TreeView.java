@@ -37,23 +37,23 @@ public class TreeView extends View {
 
     private int[] mColors;
 
-    public MandelbrotView(Context context) {
+    public TreeView(Context context) {
         super(context);
         init();
     }
 
-    public MandelbrotView(Context context, AttributeSet attrs) {
+    public TreeView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public MandelbrotView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TreeView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public MandelbrotView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public TreeView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

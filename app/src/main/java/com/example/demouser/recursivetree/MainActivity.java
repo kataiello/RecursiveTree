@@ -58,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
         resetFromDepth(treeView, depthText);
     }
 
+    public void resetFromDepth(TreeView view, TextView text)
+    {
+        String lengthString = text.getText().toString();
+        int length = Integer.parseInt(lengthString);
+        view.reset(length);
+    }
+
     public void drawBranch(int x, int y, double angle, double length)
     {
 
