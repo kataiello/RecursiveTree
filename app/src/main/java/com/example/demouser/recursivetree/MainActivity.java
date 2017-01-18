@@ -61,64 +61,64 @@ public class MainActivity extends AppCompatActivity {
     public void resetFromDepth(TreeView view, TextView text)
     {
         String lengthString = text.getText().toString();
-        int length = Integer.parseInt(lengthString);
+        int length = (int) Float.parseFloat(lengthString);
         view.reset(length);
     }
 
-    public void drawBranch(int x, int y, double angle, double length)
-    {
-
-        /*
-         * BASE CASE:
-         * x < 0, x > width
-         * y < 0, y > height
-         * length < k, k = 3, 5?
-         */
-        if(x > 0 && x < width && y > 0 && y < height && length > minLength)
-        {
-
-            /*
-             * WORK:
-             * drawline(x, y, new_x, new_y)
-             * new_x = ?
-             * new_y = ?
-             */
-
-            //calculate the endpoint
-            int newX = (int) (x + length * Math.cos(angle));
-            int newY = (int) (y + length * Math.sin(angle));
-
-            /*
-             * PAINT:
-             * stroke width
-             * stroke cap
-             * color
-             */
-
-            //TODO: draw line here
-
-            /*
-             * RECURSE:
-             * drawBranch(new_x, new_y, angle?, length)
-             */
-
-            //calculate a random angle between [theta - delta, theta] for the left
-            // and [theta, theta + delta] for the right
-            //where theta is the angle of this branch and delta is MAX_ANGLE
-            double newAngle1 = (Math.random()/(-2)) * Math.PI + angle;
-            double newAngle2 = (Math.random()/2) * Math.PI + angle;
-
-            //calculate the new length using the golden ratio
-            double newLength = length / GOLDEN_RATIO;
-
-            //call recursion
-            drawBranch(newX, newY, newAngle1, newLength);
-            drawBranch(newX, newY, newAngle2, newLength);
-
-        }
-
-
-    }
+//    public void drawBranch(int x, int y, double angle, double length)
+//    {
+//
+//        /*
+//         * BASE CASE:
+//         * x < 0, x > width
+//         * y < 0, y > height
+//         * length < k, k = 3, 5?
+//         */
+//        if(x > 0 && x < width && y > 0 && y < height && length > minLength)
+//        {
+//
+//            /*
+//             * WORK:
+//             * drawline(x, y, new_x, new_y)
+//             * new_x = ?
+//             * new_y = ?
+//             */
+//
+//            //calculate the endpoint
+//            int newX = (int) (x + length * Math.cos(angle));
+//            int newY = (int) (y + length * Math.sin(angle));
+//
+//            /*
+//             * PAINT:
+//             * stroke width
+//             * stroke cap
+//             * color
+//             */
+//
+//            //TODO: draw line here
+//
+//            /*
+//             * RECURSE:
+//             * drawBranch(new_x, new_y, angle?, length)
+//             */
+//
+//            //calculate a random angle between [theta - delta, theta] for the left
+//            // and [theta, theta + delta] for the right
+//            //where theta is the angle of this branch and delta is MAX_ANGLE
+//            double newAngle1 = (Math.random()/(-2)) * Math.PI + angle;
+//            double newAngle2 = (Math.random()/2) * Math.PI + angle;
+//
+//            //calculate the new length using the golden ratio
+//            double newLength = length / GOLDEN_RATIO;
+//
+//            //call recursion
+//            drawBranch(newX, newY, newAngle1, newLength);
+//            drawBranch(newX, newY, newAngle2, newLength);
+//
+//        }
+//
+//
+//    }
 
 
 
